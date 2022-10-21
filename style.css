@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+html {
+  font-size: 20px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body .container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+body .container .comingSoonComponent {
+  width: 375px;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  overflow: scroll;
+}
+body .container .comingSoonComponent header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 4rem;
+}
+body .container .comingSoonComponent header .logo {
+  padding-bottom: 2rem;
+}
+body .container .comingSoonComponent header .logo img {
+  width: 3rem;
+}
+body .container .comingSoonComponent header .title {
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 300;
+  color: hsl(0deg, 0%, 59%);
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+body .container .comingSoonComponent header .title span {
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 700;
+  color: hsl(209deg, 33%, 12%);
+}
+body .container .comingSoonComponent header .subtitle {
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 300;
+  color: hsl(209deg, 33%, 12%);
+  font-size: 0.7rem;
+  padding-bottom: 1.5rem;
+}
+body .container .comingSoonComponent .subscription_from_wraper {
+  width: 100%;
+}
+body .container .comingSoonComponent .subscription_from_wraper form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+body .container .comingSoonComponent .subscription_from_wraper form input {
+  width: 90%;
+  border-radius: 4rem;
+  height: 2.2rem;
+  padding-inline: 5rem;
+  margin: 0.25rem;
+  border: 1px solid hsl(223deg, 100%, 88%);
+}
+body .container .comingSoonComponent .subscription_from_wraper form input[type=email] {
+  color: hsl(223deg, 100%, 88%);
+  text-align: left;
+  padding: 0 1.5rem;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 300;
+}
+body .container .comingSoonComponent .subscription_from_wraper form input[type=button] {
+  background-color: hsl(223deg, 87%, 63%);
+  color: white;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 600;
+}
+body .container .comingSoonComponent .comingSoonPhoto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container .comingSoonComponent .comingSoonPhoto img {
+  width: 90%;
+}
+body .container .comingSoonComponent .socials {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+body .container .comingSoonComponent .socials img {
+  border: 1px solid hsla(0deg, 0%, 59%, 0.5);
+  border-radius: 100%;
+  padding: 0.3rem;
+}
+body .container .comingSoonComponent footer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+body .container .comingSoonComponent footer .copyright {
+  color: hsl(0deg, 0%, 59%);
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 300;
+  font-size: 0.6rem;
+  margin-top: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+body .container .comingSoonComponent footer .author {
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 300;
+  font-size: 0.7rem;
+  width: 100%;
+  text-align: center;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  background-color: hsl(223deg, 100%, 88%);
+}/*# sourceMappingURL=style.css.map */

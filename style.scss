@@ -1,0 +1,191 @@
+//colors
+$color_primary_blue: hsl(223, 87%, 63%);
+$color_secondary_paleBlue: hsl(223, 100%, 88%);
+$color_secondary_lightRed: hsl(354, 100%, 66%);
+$color_neutral_gray: hsl(0, 0%, 59%);
+$color_neutral_veryDarkBlue: hsl(209, 33%, 12%);
+
+//Typography
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+$mainFont: 'Libre Franklin', sans-serif;
+
+@mixin lightFont {
+    font-family: $mainFont;
+    font-weight: 300;
+}
+
+@mixin semiBoldFont {
+    font-family: $mainFont;
+    font-weight: 600;
+}
+
+@mixin boldFont {
+    font-family: $mainFont;
+    font-weight: 700;
+}
+
+//Layout
+$dektop: 1440px;
+$mobile: 375px;
+
+html {
+    font-size: 20px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    // width: 100vw;
+    // height: 100vh;
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        // border: 2px solid red;
+
+        .comingSoonComponent {
+            width: $mobile;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            //border: 1px solid $color_primary_blue;
+            overflow: scroll;
+
+            header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-top: 4rem;
+                .logo {
+                    padding-bottom: 2rem;
+
+                    img {
+                        width: 3rem;
+                    }
+                }
+
+                .title {
+                    @include lightFont();
+                    color: $color_neutral_gray;
+                    font-size: 1.2rem;
+                    padding-bottom: 1rem;
+
+                    span {
+                        @include boldFont();
+                        color: $color_neutral_veryDarkBlue;
+                    }
+                }
+
+                .subtitle {
+                    @include lightFont();
+                    color: $color_neutral_veryDarkBlue;
+                    font-size: 0.7rem;
+                    padding-bottom: 1.5rem;
+                }
+            }
+
+            .subscription_from_wraper {
+                width: 100%;
+                form {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 3rem;
+
+                    input {
+                        width: 90%;
+                        border-radius: 4rem;
+                        height: 2.2rem;
+                        padding-inline: 5rem;
+                        margin: 0.25rem;
+                        border: 1px solid $color_secondary_paleBlue;
+
+                        &[type=email] {
+                            color: $color_secondary_paleBlue;
+                            text-align: left;
+                            padding: 0 1.5rem;
+                            @include lightFont();
+
+                        }
+
+                        &[type=button] {
+                            background-color: $color_primary_blue;
+                            color: white;
+                            @include semiBoldFont();
+                        }
+                    }
+                }
+
+            }
+
+            .comingSoonPhoto {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 90%;
+                }
+            }
+
+            .socials {
+                // border: 1px solid green;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                margin-top: 5rem;
+
+                img {
+                    border: 1px solid hsla(0, 0%, 59%, 0.5);
+                    border-radius: 100%;
+                    padding: 0.3rem;
+                }
+
+            }
+            footer {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                .copyright {
+                    color: $color_neutral_gray;
+                    @include lightFont();
+                    font-size: 0.6rem;
+                    margin-top: 2rem;
+                    text-align: center;
+                    margin-bottom: 1rem;
+                }
+                .author {
+                    @include lightFont();
+                    font-size: 0.7rem;
+                    width: 100%;
+                    text-align: center;
+                    border-top-right-radius: 2rem;
+                    border-top-left-radius: 2rem;
+                    background-color: $color_secondary_paleBlue;
+                }
+
+            }
+
+        }
+    }
+
+}
