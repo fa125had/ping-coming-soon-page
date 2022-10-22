@@ -70,6 +70,14 @@ body .container .comingSoonComponent .subscription_from_wraper form {
   align-items: center;
   margin-bottom: 3rem;
 }
+body .container .comingSoonComponent .subscription_from_wraper form .submitMessage {
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 300;
+  font-size: 0.6rem;
+  color: hsl(354deg, 100%, 66%);
+  font-style: italic;
+  transition: margin 500ms;
+}
 body .container .comingSoonComponent .subscription_from_wraper form input {
   width: 90%;
   border-radius: 4rem;
@@ -79,17 +87,28 @@ body .container .comingSoonComponent .subscription_from_wraper form input {
   border: 1px solid hsl(223deg, 100%, 88%);
 }
 body .container .comingSoonComponent .subscription_from_wraper form input[type=email] {
-  color: hsl(223deg, 100%, 88%);
   text-align: left;
   padding: 0 1.5rem;
   font-family: "Libre Franklin", sans-serif;
   font-weight: 300;
 }
-body .container .comingSoonComponent .subscription_from_wraper form input[type=button] {
+body .container .comingSoonComponent .subscription_from_wraper form input[type=email]:focus {
+  border-color: hsl(223deg, 100%, 88%);
+  outline: none;
+}
+body .container .comingSoonComponent .subscription_from_wraper form input[type=submit] {
   background-color: hsl(223deg, 87%, 63%);
   color: white;
   font-family: "Libre Franklin", sans-serif;
   font-weight: 600;
+}
+body .container .comingSoonComponent .subscription_from_wraper form input[type=submit]:hover {
+  cursor: pointer;
+  background-color: hsl(223deg, 100%, 88%);
+}
+body .container .comingSoonComponent .subscription_from_wraper form input[type=submit]:active {
+  background-color: hsl(223deg, 100%, 88%);
+  color: hsl(0deg, 0%, 59%);
 }
 body .container .comingSoonComponent .comingSoonPhoto {
   display: flex;
@@ -107,10 +126,19 @@ body .container .comingSoonComponent .socials {
   gap: 1rem;
   margin-top: 5rem;
 }
-body .container .comingSoonComponent .socials img {
+body .container .comingSoonComponent .socials svg {
   border: 1px solid hsla(0deg, 0%, 59%, 0.5);
   border-radius: 100%;
-  padding: 0.3rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.4rem;
+  fill: hsl(223deg, 87%, 63%);
+}
+body .container .comingSoonComponent .socials svg:hover {
+  background-color: hsl(223deg, 87%, 63%);
+  fill: white;
+  color: white;
+  cursor: pointer;
 }
 body .container .comingSoonComponent footer {
   height: 100%;
