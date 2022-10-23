@@ -86,13 +86,13 @@ body .container .comingSoonComponent .subscription_from_wraper form input {
   margin: 0.25rem;
   border: 1px solid hsl(223deg, 100%, 88%);
 }
-body .container .comingSoonComponent .subscription_from_wraper form input[type=email] {
+body .container .comingSoonComponent .subscription_from_wraper form input[type=text] {
   text-align: left;
   padding: 0 1.5rem;
   font-family: "Libre Franklin", sans-serif;
   font-weight: 300;
 }
-body .container .comingSoonComponent .subscription_from_wraper form input[type=email]:focus {
+body .container .comingSoonComponent .subscription_from_wraper form input[type=text]:focus {
   border-color: hsl(223deg, 100%, 88%);
   outline: none;
 }

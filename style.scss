@@ -39,8 +39,6 @@ html {
 }
 
 body {
-    // width: 100vw;
-    // height: 100vh;
 
     .container {
         width: 100vw;
@@ -49,7 +47,6 @@ body {
         justify-content: flex-start;
         align-items: center;
         flex-direction: column;
-        // border: 2px solid red;
 
         .comingSoonComponent {
             width: $mobile;
@@ -68,6 +65,7 @@ body {
                 align-items: center;
                 flex-direction: column;
                 margin-top: 4rem;
+
                 .logo {
                     padding-bottom: 2rem;
 
@@ -98,6 +96,7 @@ body {
 
             .subscription_from_wraper {
                 width: 100%;
+
                 form {
                     width: 100%;
                     display: flex;
@@ -114,6 +113,7 @@ body {
                         transition: margin 500ms;
 
                     }
+
                     input {
                         width: 90%;
                         border-radius: 4rem;
@@ -122,11 +122,11 @@ body {
                         margin: 0.25rem;
                         border: 1px solid $color_secondary_paleBlue;
 
-                        &[type=email] {
-                            // color: $color_secondary_paleBlue;
+                        &[type=text] {
                             text-align: left;
                             padding: 0 1.5rem;
                             @include lightFont();
+
                             &:focus {
                                 border-color: $color_secondary_paleBlue;
                                 outline: none;
@@ -138,10 +138,12 @@ body {
                             background-color: $color_primary_blue;
                             color: white;
                             @include semiBoldFont();
+
                             &:hover {
                                 cursor: pointer;
                                 background-color: $color_secondary_paleBlue;
                             }
+
                             &:active {
                                 background-color: $color_secondary_paleBlue;
                                 color: $color_neutral_gray;
@@ -170,7 +172,7 @@ body {
                 align-items: center;
                 gap: 1rem;
                 margin-top: 5rem;
-                
+
 
                 svg {
                     border: 1px solid hsla(0, 0%, 59%, 0.5);
@@ -189,6 +191,7 @@ body {
                 }
 
             }
+
             footer {
                 height: 100%;
                 width: 100%;
@@ -196,6 +199,7 @@ body {
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-between;
+
                 .copyright {
                     color: $color_neutral_gray;
                     @include lightFont();
@@ -204,6 +208,7 @@ body {
                     text-align: center;
                     margin-bottom: 1rem;
                 }
+
                 .author {
                     @include lightFont();
                     font-size: 0.7rem;

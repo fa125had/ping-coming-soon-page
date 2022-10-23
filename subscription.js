@@ -1,16 +1,12 @@
-// const submitFormButton = document.getElementById('submitFormButton');
-// const userEmail = document.getElementById('userEmail');
-// const submitMessage = document.getElementById('submitMessage');
-// const subscriptionForm = document.getElementById('subscriptionForm');
-
 const mailValidator = () => {
-    const validRegx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const validRegx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     const userEmail = document.forms['subscriptionForm']['userEmail'].value;
     const userEmailField = document.forms['subscriptionForm']['userEmail'];
     const submitMessage = document.getElementById('submitMessage');
     const submitFormButton = document.getElementById('submitFormButton');
-    if(userEmail.match(validRegx)) {
-        userEmailField.style.borderColor ='hsl(223, 100%, 88%)';
+
+    if (userEmail.match(validRegx)) {
+        userEmailField.style.borderColor = 'hsl(223, 100%, 88%)';
         submitFormButton.value = 'Thank you!';
         document.forms['subscriptionForm'].style.pointerEvents = 'none';
         submitMessage.innerHTML = '';
@@ -22,6 +18,6 @@ const mailValidator = () => {
         submitMessage.style.marginBottom = '1rem';
         return false;
     }
-    
+
 };
 
