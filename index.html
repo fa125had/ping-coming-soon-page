@@ -24,9 +24,11 @@
         <!-- Subscription Form -->
         <form aria-label="Subscription Form" action="#" name="subscriptionForm" id="subscriptionForm"
           onsubmit="return mailValidator()" method="post">
-          <input aria-label="Subscriber Email Address" type="text" id="userEmail" name="userEmail"
-            placeholder="Your email address..." maxlength="30">
-          <div id="submitMessage" class="submitMessage"></div>
+          <div class="wraper">
+            <input aria-label="Subscriber Email Address" type="text" id="userEmail" name="userEmail"
+              placeholder="Your email address..." maxlength="30">
+            <div id="submitMessage" class="submitMessage"></div>
+          </div>
           <input aria-label="Submit Button" type="submit" id="submitFormButton" value="Notify Me">
         </form>
       </section>

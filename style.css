@@ -32,7 +32,7 @@ body .container .comingSoonComponent header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 body .container .comingSoonComponent header .logo {
   padding-bottom: 2rem;
@@ -63,12 +63,11 @@ body .container .comingSoonComponent .subscription_from_wraper {
   width: 100%;
 }
 body .container .comingSoonComponent .subscription_from_wraper form {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 3rem;
+  margin: 0 1rem 3rem;
 }
 body .container .comingSoonComponent .subscription_from_wraper form .submitMessage {
   font-family: "Libre Franklin", sans-serif;
@@ -78,8 +77,15 @@ body .container .comingSoonComponent .subscription_from_wraper form .submitMessa
   font-style: italic;
   transition: margin 500ms;
 }
+body .container .comingSoonComponent .subscription_from_wraper form .wraper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 body .container .comingSoonComponent .subscription_from_wraper form input {
-  width: 90%;
+  width: 100%;
   border-radius: 4rem;
   height: 2.2rem;
   padding-inline: 5rem;
@@ -166,4 +172,102 @@ body .container .comingSoonComponent footer .author {
   border-top-right-radius: 2rem;
   border-top-left-radius: 2rem;
   background-color: hsl(223deg, 100%, 88%);
+}
+
+@media only screen and (min-width: 800px) {
+  body .container {
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  body .container .comingSoonComponent {
+    overflow: hidden;
+    height: 100%;
+    width: 720px;
+    max-width: 1440px;
+  }
+  body .container .comingSoonComponent header {
+    margin-top: 2rem;
+  }
+  body .container .comingSoonComponent header .logo img {
+    width: 4rem;
+  }
+  body .container .comingSoonComponent header .title {
+    font-size: 2.2rem;
+  }
+  body .container .comingSoonComponent header .subtitle {
+    font-size: 1.1rem;
+  }
+  body .container .comingSoonComponent .subscription_from_wraper form {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  body .container .comingSoonComponent .subscription_from_wraper form .submitMessage {
+    font-style: italic;
+    transition: margin 500ms;
+  }
+  body .container .comingSoonComponent .subscription_from_wraper form input {
+    width: 100%;
+    border-radius: 4rem;
+    height: 2.7rem;
+    padding-inline: 0px;
+    margin: 0.25rem;
+    border: 1px solid hsl(223deg, 100%, 88%);
+  }
+  body .container .comingSoonComponent .subscription_from_wraper form input[type=text] {
+    max-width: 20rem;
+    text-align: left;
+    padding: 0 1.5rem;
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 300;
+  }
+  body .container .comingSoonComponent .subscription_from_wraper form input[type=text]:focus {
+    border-color: hsl(223deg, 100%, 88%);
+    outline: none;
+  }
+  body .container .comingSoonComponent .subscription_from_wraper form input[type=submit] {
+    max-width: 10rem;
+    background-color: hsl(223deg, 87%, 63%);
+    color: white;
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 600;
+  }
+  body .container .comingSoonComponent .subscription_from_wraper form input[type=submit]:hover {
+    cursor: pointer;
+    background-color: hsl(223deg, 100%, 88%);
+  }
+  body .container .comingSoonComponent .subscription_from_wraper form input[type=submit]:active {
+    background-color: hsl(223deg, 100%, 88%);
+    color: hsl(0deg, 0%, 59%);
+  }
+  body .container .comingSoonComponent .comingSoonPhoto {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-height: 15rem;
+  }
+  body .container .comingSoonComponent .comingSoonPhoto img {
+    height: 90%;
+  }
+  body .container .comingSoonComponent .socials {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  body .container .comingSoonComponent .socials svg {
+    border: 1px solid hsla(0deg, 0%, 59%, 0.5);
+    border-radius: 100%;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.4rem;
+    fill: hsl(223deg, 87%, 63%);
+  }
+  body .container .comingSoonComponent .socials svg:hover {
+    background-color: hsl(223deg, 87%, 63%);
+    fill: white;
+    color: white;
+    cursor: pointer;
+  }
 }/*# sourceMappingURL=style.css.map */

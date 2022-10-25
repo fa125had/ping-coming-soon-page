@@ -4,6 +4,7 @@ const mailValidator = () => {
     const userEmailField = document.forms['subscriptionForm']['userEmail'];
     const submitMessage = document.getElementById('submitMessage');
     const submitFormButton = document.getElementById('submitFormButton');
+    const mq = window.matchMedia('(min-width: 800px)');
 
     if (userEmail.match(validRegx)) {
         userEmailField.style.borderColor = 'hsl(223, 100%, 88%)';
@@ -15,7 +16,10 @@ const mailValidator = () => {
     } else {
         userEmailField.style.borderColor = 'hsl(354, 100%, 66%)';
         submitMessage.innerHTML = 'Please provide a valid email address';
-        submitMessage.style.marginBottom = '1rem';
+
+        if (!mq.matches) {
+            submitMessage.style.marginBottom = '1rem';
+        }
         return false;
     }
 

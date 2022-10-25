@@ -64,7 +64,7 @@ body {
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                margin-top: 4rem;
+                margin-top: 3rem;
 
                 .logo {
                     padding-bottom: 2rem;
@@ -98,12 +98,11 @@ body {
                 width: 100%;
 
                 form {
-                    width: 100%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    margin-bottom: 3rem;
+                    margin: 0 1rem 3rem;
 
                     .submitMessage {
                         @include lightFont();
@@ -114,8 +113,16 @@ body {
 
                     }
 
+                    .wraper {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
                     input {
-                        width: 90%;
+                        width: 100%;
                         border-radius: 4rem;
                         height: 2.2rem;
                         padding-inline: 5rem;
@@ -165,7 +172,6 @@ body {
             }
 
             .socials {
-                // border: 1px solid green;
                 width: 100%;
                 display: flex;
                 justify-content: center;
@@ -224,4 +230,130 @@ body {
         }
     }
 
+}
+
+@media only screen and (min-width: 800px) {
+    body {
+        .container {
+            max-height: 100vh;
+            overflow: hidden;
+            .comingSoonComponent {
+                overflow: hidden;
+
+                height: 100%;
+                width: $dektop / 2;
+                max-width: $dektop;
+                header {
+                margin-top: 2rem;
+                    .logo {
+                        img {
+                            width: 4rem;
+                        }
+                    }
+
+                    .title {
+                        font-size: 2.2rem;
+                    }
+
+                    .subtitle {
+                        font-size: 1.1rem;
+
+                    }
+                }
+
+                .subscription_from_wraper {
+
+                    form {
+                        flex-direction: row;
+                        align-items: flex-start;
+
+                        .submitMessage {
+                            font-style: italic;
+                            transition: margin 500ms;
+
+                        }
+
+                        input {
+                            width: 100%;
+                            border-radius: 4rem;
+                            height: 2.7rem;
+                            padding-inline: 0px;
+                            margin: 0.25rem;
+                            border: 1px solid $color_secondary_paleBlue;
+                            // gap: 2rem;
+                            &[type=text] {
+                                max-width: 20rem;
+                                text-align: left;
+                                padding: 0 1.5rem;
+                                @include lightFont();
+
+                                &:focus {
+                                    border-color: $color_secondary_paleBlue;
+                                    outline: none;
+                                }
+
+                            }
+
+                            &[type=submit] {
+                                max-width: 10rem;
+                                background-color: $color_primary_blue;
+                                color: white;
+                                @include semiBoldFont();
+
+                                &:hover {
+                                    cursor: pointer;
+                                    background-color: $color_secondary_paleBlue;
+                                }
+
+                                &:active {
+                                    background-color: $color_secondary_paleBlue;
+                                    color: $color_neutral_gray;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                .comingSoonPhoto {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    max-height: 15rem;
+                    img {
+                        height: 90%;
+                    }
+                }
+
+                .socials {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    margin-top: 1rem;
+    
+    
+                    svg {
+                        border: 1px solid hsla(0, 0%, 59%, 0.5);
+                        border-radius: 100%;
+                        width: 2rem;
+                        height: 2rem;
+                        padding: 0.4rem;
+                        fill: $color_primary_blue;
+    
+                        &:hover {
+                            background-color: $color_primary_blue;
+                            fill: white;
+                            color: white;
+                            cursor: pointer;
+                        }
+                    }
+    
+                }            
+                
+
+            }
+        }
+    }
 }
